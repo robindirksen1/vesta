@@ -4,10 +4,16 @@ $config = array();
 $config['db_dsnw'] = 'mysql://roundcube:%password%@localhost/roundcube';
 $config['default_host'] = 'localhost';
 
-$config['smtp_server'] = '';
+$config['smtp_server'] = 'localhost';
+// SMTP port (default is 25; use 587 for STARTTLS or 465 for the
+// deprecated SSL over SMTP (aka SMTPS))
 $config['smtp_port'] = 25;
-$config['smtp_user'] = '';
-$config['smtp_pass'] = '';
+// SMTP username (if required) if you use %u as the username Roundcube
+// will use the current username for login
+$config['smtp_user'] = '%u';
+// SMTP password (if required) if you use %p as the password Roundcube
+// will use the current user's password for login
+$config['smtp_pass'] = '%p';
 $config['support_url'] = '';
 
 $rcmail_config['log_dir'] = '/var/log/roundcubemail/';
